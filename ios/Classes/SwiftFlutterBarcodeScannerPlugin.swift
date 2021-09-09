@@ -146,7 +146,7 @@ protocol ScanBarcodeDelegate {
 }
 
 class BarcodeScannerViewController: UIViewController {
-    private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
+    /*private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                       AVMetadataObject.ObjectType.code39,
                                       AVMetadataObject.ObjectType.code39Mod43,
                                       AVMetadataObject.ObjectType.code93,
@@ -158,7 +158,8 @@ class BarcodeScannerViewController: UIViewController {
                                       AVMetadataObject.ObjectType.itf14,
                                       AVMetadataObject.ObjectType.dataMatrix,
                                       AVMetadataObject.ObjectType.interleaved2of5,
-                                      AVMetadataObject.ObjectType.qr]
+                                      AVMetadataObject.ObjectType.qr]*/
+    private let supportedCodeTypes = [AVMetadataObject.ObjectType.code39]
     public var delegate: ScanBarcodeDelegate? = nil
     private var captureSession = AVCaptureSession()
     private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
